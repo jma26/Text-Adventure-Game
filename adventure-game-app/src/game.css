@@ -5,10 +5,16 @@
 }
 
 .Game-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #192850;
+    height: 15vh;
 }
 
 .Game-title {
     color: #F3F4F0;
+    font-size: 2.5rem;
     text-align: center;
+    vertical-align: middle;
 }
