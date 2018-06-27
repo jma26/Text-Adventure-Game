@@ -1,0 +1,14 @@
+* {
+    font-family: sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+.Game-header {
+    background-color: #192850;
+}
+
+.Game-title {
+    color: #F3F4F0;
+    text-align: center;
+}
