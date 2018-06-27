@@ -1,0 +1,14 @@
+Color Semantics
+Bootstrap's UI colors contain semantic information and shouldn't be changed arbitrarily. However we can tweak them to better fit the color palette.
+
+F3F4F0
+82C2E9
+AE3D5E
+D1944B
+192850
+
+Night Shadz	#ae3d5e	Primary
+Bunting	#192850	Info
+Hippie Green	#698d54	Success
+Zest	#e77d1c	Warning
+Pomegranate	#f44336	Danger
