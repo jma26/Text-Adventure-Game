@@ -1,0 +1,49 @@
+h3 {
+    display: inline-block;
+    color: #F3F4F0;
+    padding-right: 8px;
+}
+
+fieldset {
+    background-color: #AE3D5E;
+    border-radius: 16px;
+}
+
+.player-form {
+    margin: 0 auto;
+    margin-top: 16px;
+    max-width: 700px;
+}
+
+.legend {
+    background-color: #82C2E9;
+    border-radius: 16px;
+    color: #192850;
+    font-size: 1.5rem;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+.player-name {
+    padding: 16px;
+    text-align: center;
+}
+
+.player-profession {
+    max-width: 300px;
+    margin: 0 auto;
+    padding-bottom: 16px;
+}
+
+.player-profession div {
+    padding: 8px;
+    color: #F3F4F0;
+}
+
+input[type="submit"] {
+    background-color: #F3F4F0;
+    border-radius: 8px;
+    color: #192850;
+    padding: 8px;
+    margin-right: 0px;
+}
