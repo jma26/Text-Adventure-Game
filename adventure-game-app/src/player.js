@@ -1,4 +1,5 @@
 import './player.css';
+import Home from './home.js';
 import React from 'react';
 
 class Player extends React.Component {
@@ -6,29 +7,43 @@ class Player extends React.Component {
         super(props);
         this.state = {
             name: '',
-            profession: null
+            profession: null,
+            submitted: false,
         };
         this.onNameChange = this.onNameChange.bind(this);
         this.onProfessionChange = this.onProfessionChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    getInitialState() {
+        return {
+            submitted: false,
+        };
     }
     
     onNameChange(event) {
         this.setState({
             name: event.target.value
-        })
+        });
     }
 
     onProfessionChange(event) {
         this.setState({
             profession: event.target.value
-        })
+        });
     }
 
     handleSubmit(event) {
         event.preventDefault();
+        this.setState({
+            submitted: true
+        });
     }
 
     render() {
+        if (this.state.submitted) {
+            return <Home name={this.state.name} profession={this.state.profession} />
+        }
         return (
             <div>
                 <div className="player-form">
