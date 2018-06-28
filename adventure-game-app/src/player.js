@@ -2,39 +2,65 @@ import './player.css';
 import React from 'react';
 
 class Player extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            name: '',
+            profession: null
+        };
+        this.onNameChange = this.onNameChange.bind(this);
+        this.onProfessionChange = this.onProfessionChange.bind(this);
+    }
+    
+    onNameChange(event) {
+        this.setState({
+            name: event.target.value
+        })
+    }
+
+    onProfessionChange(event) {
+        this.setState({
+            profession: event.target.value
+        })
+    }
+
+    handleSubmit(event) {
+        event.preventDefault();
+    }
+
     render() {
         return (
             <div>
                 <div className="player-form">
-                    <form>
+                    <form onSubmit={this.handleSubmit}>
                         <fieldset>
                             <legend className="legend"> Your Character </legend>
                             <div className="player-name">
                                 <h3> Who are you? </h3>
-                                <input type="text" name="name"/>
+                                <input type="text" name="name" onChange={this.onNameChange} />
                             </div>
                             <div className="player-profession">
                                 <h3> Your profession? </h3>
                                 <div>
-                                    <input type="radio" name="profession" value="Doctor" /> Doctor
+                                    <input type="radio" name="profession" value="Doctor" onChange={this.onProfessionChange} /> Doctor
                                 </div>
                                 <div>
-                                    <input type="radio" name="profession" value="Soldier" /> Soldier
+                                    <input type="radio" name="profession" value="Soldier" onChange={this.onProfessionChange} /> Soldier
                                 </div>
                                 <div>
-                                    <input type="radio" name="profession" value="Teacher" /> Teacher
+                                    <input type="radio" name="profession" value="Teacher" onChange={this.onProfessionChange} /> Teacher
                                 </div>
                                 <div>
-                                    <input type="radio" name="profession" value="Athlete" /> Athlete
+                                    <input type="radio" name="profession" value="Athlete" onChange={this.onProfessionChange} /> Athlete
                                 </div>
                                 <div>
-                                    <input type="radio" name="profession" value="Survivalist" /> Survivalist
+                                    <input type="radio" name="profession" value="Survivalist" onChange={this.onProfessionChange} /> Survivalist
                                 </div>
                                 <div>
-                                    <input type="radio" name="profession" value="Scientist" /> Scientist
+                                    <input type="radio" name="profession" value="Scientist" onChange={this.onProfessionChange} /> Scientist
                                 </div>
                                 <div>
-                                    <input type="radio" name="profession" value="Farmer" /> Farmer
+                                    <input type="radio" name="profession" value="Farmer" onChange={this.onProfessionChange} /> Farmer
                                 </div>
                                 <input type="submit" value="Submit" />
                             </div>
