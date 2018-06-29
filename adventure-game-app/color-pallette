@@ -1,11 +1,11 @@
 Color Semantics
 Bootstrap's UI colors contain semantic information and shouldn't be changed arbitrarily. However we can tweak them to better fit the color palette.
 
-F3F4F0
-82C2E9
-AE3D5E
-D1944B
-192850
+F3F4F0 - white
+82C2E9 - blue
+AE3D5E - reddish
+D1944B - tan/brown
+192850 - purple?
 
 Night Shadz	#ae3d5e	Primary
 Bunting	#192850	Info
