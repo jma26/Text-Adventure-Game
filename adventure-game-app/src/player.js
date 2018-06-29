@@ -41,7 +41,7 @@ class Player extends React.Component {
     }
 
     render() {
-        if (this.state.submitted) {
+        if (this.state.submitted && this.state.name !== '' && this.state.profession !== null) {
             return <Home name={this.state.name} profession={this.state.profession} />
         }
         return (
