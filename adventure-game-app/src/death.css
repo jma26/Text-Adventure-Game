@@ -1,0 +1,35 @@
+.content {
+    background-color: #D1944B;
+    height: 100vh;
+    padding: 16px;
+}
+
+.info-container {
+    border: 2px solid #AE3D5E;
+    border-radius: 8px;
+    display: flex;
+    padding: 48px;
+    justify-content: center;
+}
+
+.player-info {
+    border: 2px solid #AE3D5E;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 8px;
+    padding: 8px;
+}
+
+.death-container {
+    border: 2px solid #AE3D5E;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 1.3rem;
+    margin: 8px;
+    padding: 8px;
+    text-align: center;
+}
