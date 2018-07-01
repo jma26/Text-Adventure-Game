@@ -21,7 +21,7 @@ class Home extends React.Component {
 
     render() {
         if (this.state.showDeath && this.state.name !== '' && this.state.profession !== null) {
-            return <Death name={this.state.name} profession={this.state.profession} />
+            return <Death name={this.state.name} profession={this.state.profession} reason={"fire"} />
         }
 
         return (
