@@ -1,5 +1,6 @@
 import './home.css';
 import Death from './death.js';
+import Warning from './warning.js';
 import React from 'react';
 
 class Home extends React.Component {
@@ -9,8 +10,10 @@ class Home extends React.Component {
             name: this.props.name,
             profession: this.props.profession,
             showDeath: false,
+            showWarning: false,
         }
         this.showDeathComponent = this.showDeathComponent.bind(this);
+        this.showWarningComponent = this.showWarningComponent.bind(this);
     }
 
     showDeathComponent() {
@@ -19,9 +22,17 @@ class Home extends React.Component {
         });
     }
 
+    showWarningComponent() {
+        this.setState({
+            showWarning: true,
+        })
+    }
+
     render() {
         if (this.state.showDeath && this.state.name !== '' && this.state.profession !== null) {
             return <Death name={this.state.name} profession={this.state.profession} reason={"fire"} />
+        } else if (this.state.showWarning && this.state.name !== '' && this.state.profession !== null) {
+            return <Warning name={this.state.name} profession={this.state.profession} />
         }
 
         return (
@@ -35,7 +46,7 @@ class Home extends React.Component {
                 </div>
                 <div className="player-options">
                     <button onClick={this.showDeathComponent}> Go back to sleep </button>
-                    <button> Look outside the window </button>
+                    <button onClick={this.showWarningComponent}> Look outside the window </button>
                     <button> Don't care! Grab your gear and walk towards the door without checking </button>
                 </div>
             </div>
