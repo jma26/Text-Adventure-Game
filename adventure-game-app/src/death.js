@@ -18,7 +18,7 @@ class Death extends React.Component {
                             <h3> Player name: {this.state.name} </h3>
                             <h3> Profession: {this.state.profession} </h3>
                         </div>
-                        <div className="death-container">
+                        <div className="story">
                             <h1> Game over! </h1>
                             <p> You died from {this.props.reason}. Little did you know your building was on fire and you were slowly engulfed in flames....Better luck next time </p>
                         </div>
